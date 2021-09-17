@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted () {
-    if (process.env.NODE_ENV === 'production' && atob('cWlhbmdtb3UucmVu') !== location.hostname) {
+    if (process.env.NODE_ENV === 'production' && !location.hostname.includes(atob("cWlhbmdtb3VyZW4="))) {
       this.$destroy()
     }
   },
