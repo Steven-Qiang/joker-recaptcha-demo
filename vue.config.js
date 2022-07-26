@@ -5,12 +5,12 @@
  * @create: 2021-09-11 04:25:20
  * @author: qiangmouren (2962051004@qq.com)
  * -----
- * @last-modified: 2021-09-17 07:03:09
+ * @last-modified: 2022-07-26 02:16:45
  * -----
  */
 module.exports = {
     productionSourceMap: false,
-    publicPath: process.env.NODE_ENV === 'production' ? '/joke_recaptcha_demo/' : '',
+    publicPath: process.env.NODE_ENV === 'production' ? '/joke-recaptcha-demo/' : '',
     configureWebpack: config => {
 
         config.externals = {
