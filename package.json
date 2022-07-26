@@ -1,7 +1,7 @@
 {
-  "name": "joke_recaptcha_demo",
+  "name": "joke-recaptcha-demo",
   "version": "0.1.0",
-  "description": "恶搞reCaptcha验证码。所给的图片并非问题所问。",
+  "description": "恶搞ReCaptcha验证码。所给的图片并非问题所问。demo",
   "private": true,
   "author": {
     "name": "qiangmouren",
@@ -9,7 +9,7 @@
     "email": "2962051004@qq.com"
   },
   "repository": {
-    "url": "https://github.com/qiangmouren/joke_recaptcha_demo",
+    "url": "https://github.com/qiangmouren/joke-recaptcha-demo",
     "type": "git"
   },
 
