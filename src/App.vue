@@ -75,13 +75,13 @@ export default {
 body {
   padding-top: 20px;
 }
-.rc-imageselect-desc-wrapper {
-  height: 113px;
-}
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 40px;
   border-top: 1px solid #eee;
+}
+.rc-imageselect-desc-wrapper {
+  height: 113px;
 }
 </style>
