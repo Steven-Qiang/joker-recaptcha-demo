@@ -1,5 +1,5 @@
 {
-  "name": "joke-recaptcha-demo",
+  "name": "joker-recaptcha-demo",
   "version": "0.1.0",
   "description": "恶搞ReCaptcha验证码。所给的图片并非问题所问。demo",
   "private": true,
@@ -9,7 +9,7 @@
     "email": "2962051004@qq.com"
   },
   "repository": {
-    "url": "https://github.com/qiangmouren/joke-recaptcha-demo",
+    "url": "https://github.com/qiangmouren/joker-recaptcha-demo",
     "type": "git"
   },
   "scripts": {
@@ -19,8 +19,9 @@
   "dependencies": {
     "ant-design-vue": "^1.7.8",
     "core-js": "^3.6.5",
-    "joke-recaptcha": "https://github.com/qiangmouren/joke-recaptcha",
-    "vue": "^2.6.11"
+    "joker-recaptcha": "https://github.com/qiangmouren/joker-recaptcha",
+    "vue": "^2.6.11",
+    "vue-toasted": "^1.1.28"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

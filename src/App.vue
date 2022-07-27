@@ -1,39 +1,47 @@
 <template>
   <div id="app">
     <h1>仅供内部使用，禁止外泄！</h1>
-    <div style="margin: 25px 0;">
+    <div style="margin: 25px 0">
       <p>目前通过手机号即可查姓名、身份证号码、住址、手机号码、邮箱、开房数据等。</p>
       <p>近期发现有部分人员泄露本站，现在本站已增加人机验证。</p>
       <p>目前已知的数据有818,842,400条。这一数字还在增加！</p>
     </div>
-    <form class="form-inline">
+    <form class="form" @submit.prevent>
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-addon">手机号</div>
-          <input type="text" class="form-control" placeholder="13000000000" maxlength="11" v-model="tel" />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="13000000000"
+            maxlength="11"
+            v-model="tel"
+            style="max-width: 234px;"
+          />
         </div>
       </div>
-      <button type="button" class="btn btn-primary" @click="submit" style="margin-left: 10px;">点击查询</button>
+
+      <div class="form-group">
+        <Captcha />
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" @click="submit">点击查询</button>
+      </div>
     </form>
 
     <footer class="footer">
       <p>
         &copy; {{ new Date().getFullYear() }}
-        <a href="https://github.com/qiangmouren/joke-recaptcha-demo" target="_blank" rel="noopener noreferrer"
+        <a href="https://github.com/qiangmouren/joker-recaptcha-demo" target="_blank" rel="noopener noreferrer"
           >qiangmouren</a
         >
       </p>
     </footer>
-
-    <Captcha v-if="verify" @failed="failed" @close="close" />
   </div>
 </template>
 
 <script>
-import Captcha from 'joke-recaptcha/src/components/Captcha.vue';
-
-import 'ant-design-vue/lib/message/style/index.css';
-import { message } from 'ant-design-vue';
+import Captcha from 'joker-recaptcha/src/components/Captcha.vue';
 
 export default {
   name: 'App',
@@ -42,30 +50,22 @@ export default {
   },
   data() {
     return {
-      verify: false,
       tel: '',
     };
   },
   mounted() {
+    // cspell-checker:disable-next-line
     if (process.env.NODE_ENV === 'production' && !location.hostname.includes(atob('cWlhbmdtb3VyZW4='))) {
       this.$destroy();
     }
   },
   methods: {
-    close() {
-      this.verify = false;
-    },
-    failed() {
-      this.verify = false;
-      message.error('验证失败，请重试。');
-    },
     submit() {
+      const opt = { position: 'top-center', duration: 1000 };
       if (!/^1[3456789]\d{9}$/.test(this.tel)) {
-        message.error('手机号格式错误。');
-        return;
+        return this.$toasted.show('手机号格式错误。', opt);
       }
-      message.info('请先完成人机验证。');
-      this.verify = true;
+      this.$toasted.show('请先完成人机验证。', opt);
     },
   },
 };
