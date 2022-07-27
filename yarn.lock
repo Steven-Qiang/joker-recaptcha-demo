@@ -4970,7 +4970,7 @@ javascript-stringify@^2.0.1:
 
 "joker-recaptcha@https://github.com/qiangmouren/joker-recaptcha":
   version "0.1.0"
-  resolved "https://github.com/qiangmouren/joker-recaptcha#a9834c8986c9c3bf631020f2676a2e54c9edac8c"
+  resolved "https://github.com/qiangmouren/joker-recaptcha#391e34481229cfe1b4094e94eb612e02fca03fda"
   dependencies:
     core-js "^3.6.5"
     delay "^5.0.0"
