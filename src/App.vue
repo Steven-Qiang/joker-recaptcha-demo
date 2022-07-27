@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Captcha from './components/Captcha.vue';
+import Captcha from 'joke-recaptcha/src/components/Captcha.vue';
 
 import 'ant-design-vue/lib/message/style/index.css';
 import { message } from 'ant-design-vue';

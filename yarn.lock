@@ -4813,6 +4813,13 @@ javascript-stringify@^2.0.1:
   resolved "https://registry.nlark.com/javascript-stringify/download/javascript-stringify-2.1.0.tgz#27c76539be14d8bd128219a2d731b09337904e79"
   integrity sha1-J8dlOb4U2L0Sghmi1zGwkzeQTnk=
 
+"joke-recaptcha@https://github.com/qiangmouren/joke-recaptcha":
+  version "0.1.0"
+  resolved "https://github.com/qiangmouren/joke-recaptcha#d9e2956880f9cd811f261c176418bef810f9f2f8"
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+
 js-message@1.0.7:
   version "1.0.7"
   resolved "https://registry.npm.taobao.org/js-message/download/js-message-1.0.7.tgz#fbddd053c7a47021871bb8b2c95397cc17c20e47"
